@@ -1,0 +1,50 @@
+{
+  "name": "certificate-system",
+  "version": "1.0.0",
+  "description": "Certificate Issuing & Verification System",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "electron": "electron electron/main.js",
+    "electron-dev": "concurrently "npm run dev" "wait-on http://localhost:3000 && npm run electron"",
+    "dist": "next build && electron-builder",
+    "dist:win": "next build && electron-builder --win"
+  },
+  "dependencies": {
+    "next": "14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@supabase/auth-helpers-nextjs": "^0.8.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "qrcode": "^1.5.3",
+    "crypto-js": "^4.2.0",
+    "@upstash/redis": "^1.28.0",
+    "react-hot-toast": "^2.4.1",
+    "lucide-react": "^0.300.0",
+    "date-fns": "^3.0.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "react-draggable": "^4.4.6",
+    "react-dropzone": "^14.2.3",
+    "zustand": "^4.4.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/crypto-js": "^4.2.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "14.2.0"
+  }
+}
